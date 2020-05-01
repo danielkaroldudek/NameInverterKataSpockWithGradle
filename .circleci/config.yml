@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  unit_tests:
+  run_unit_tests_with_jacoco_coverage_report:
     docker:
       - image: circleci/openjdk:11-jdk
 
@@ -26,10 +26,10 @@ jobs:
 
       - run:
           name: "Run unit tests"
-          command: gradle test
+          command: gradle clenTest test jacocoTestReport
 
 workflows:
   version: 2
   execute_unit_tests:
     jobs:
-      - unit_tests
+      - run_unit_tests_with_jacoco_coverage_report
