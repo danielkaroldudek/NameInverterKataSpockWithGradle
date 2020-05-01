@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  run_unit_tests_with_jacoco_coverage_report:
+  run_unit_tests_with_jacoco_coverage_with_coveralls:
     docker:
       - image: circleci/openjdk:11-jdk
 
@@ -32,4 +32,4 @@ workflows:
   version: 2
   execute_unit_tests:
     jobs:
-      - run_unit_tests_with_jacoco_coverage_report
+      - run_unit_tests_with_jacoco_coverage_with_coveralls
