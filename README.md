@@ -1,0 +1,1 @@
+### Name Inverter Kata written in Java with tests in Spock and build with Gradle
