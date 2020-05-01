@@ -28,8 +28,7 @@ jobs:
           name: "Run unit tests"
           command: gradle cleanTest test jacocoTestReport coveralls
 
-      - store_test_results:
-          path: test-results
+      - store_test_results
 
 workflows:
   version: 2
