@@ -26,7 +26,7 @@ jobs:
 
       - run:
           name: "Run unit tests"
-          command: gradle cleanTest test jacocoTestReport
+          command: gradle cleanTest test jacocoTestReport coveralls
 
 workflows:
   version: 2
